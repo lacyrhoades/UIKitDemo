@@ -12,14 +12,14 @@ class FirstTabController: UIViewController {
     convenience init() {
         self.init(nibName: nil, bundle: nil)
         
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        
         self.view.backgroundColor = .red
         
         let label = UILabel()
-        label.text = "VC Created with Code"
+        label.text = "This is FirstTabController.swift"
         label.textColor = UIColor.white
         label.textAlignment = .center
-        
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
         label.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(label)
