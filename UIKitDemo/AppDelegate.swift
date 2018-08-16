@@ -12,9 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let tab1 = UIStoryboard.init(name: "FirstTabViewController", bundle: Bundle(for: AppDelegate.self)).instantiateInitialViewController()!
+        
+        let tab2 = UIViewController()
+        tab2.view.backgroundColor = .green
+        tab2.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        
+        let tab3 = UIViewController()
+        tab3.view.backgroundColor = .blue
+        tab3.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
+
+        self.window?.rootViewController = CustomTabBarController(tabs: [tab1, tab2, tab3])
+        
         return true
     }
 
