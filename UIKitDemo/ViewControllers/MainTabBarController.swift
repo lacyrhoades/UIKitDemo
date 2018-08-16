@@ -23,7 +23,7 @@ class MainTabBarController: UITabBarController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented - this controller cannot be loaded from a xib or storyboard")
     }
     
     override func viewDidAppear(_ animated: Bool) {
