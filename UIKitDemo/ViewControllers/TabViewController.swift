@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstTabController: UIViewController {
+class TabViewController: UIViewController {
     convenience init() {
         self.init(nibName: nil, bundle: nil)
         
@@ -17,7 +17,7 @@ class FirstTabController: UIViewController {
         self.view.backgroundColor = .red
         
         let label = UILabel()
-        label.text = "This is FirstTabController.swift"
+        label.text = "This is TabViewController.swift"
         label.textColor = UIColor.white
         label.textAlignment = .center
         

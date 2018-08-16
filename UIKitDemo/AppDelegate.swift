@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let tab1 = FirstTabController()
+        let tab1 = TabViewController()
         
-        let tab2 = FirstTabController(nibName: "FirstTabController", bundle: nil)
+        let tab2 = TabViewController(nibName: "TabViewController", bundle: nil)
         
-        let tab3 = UIStoryboard(name: "FirstTabController", bundle: nil).instantiateInitialViewController()!
+        let tab3 = UIStoryboard(name: "TabViewController", bundle: nil).instantiateInitialViewController()!
         
         //
         // There is no way to do this sort of setup in a XIB file :[

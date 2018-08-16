@@ -11,10 +11,10 @@
 		0F405FB3212366CD00A0DB7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F405FB2212366CD00A0DB7F /* Assets.xcassets */; };
 		0F405FB6212366CD00A0DB7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F405FB4212366CD00A0DB7F /* LaunchScreen.storyboard */; };
 		0F405FC1212366CD00A0DB7F /* UIKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F405FC0212366CD00A0DB7F /* UIKitDemoTests.swift */; };
-		0FF03BE82126044300CC82CB /* FirstTabController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE42126044300CC82CB /* FirstTabController.xib */; };
+		0FF03BE82126044300CC82CB /* TabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE42126044300CC82CB /* TabViewController.xib */; };
 		0FF03BE92126044300CC82CB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE52126044300CC82CB /* MainTabBarController.swift */; };
-		0FF03BEA2126044300CC82CB /* FirstTabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE62126044300CC82CB /* FirstTabController.storyboard */; };
-		0FF03BEB2126044300CC82CB /* FirstTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE72126044300CC82CB /* FirstTabController.swift */; };
+		0FF03BEA2126044300CC82CB /* TabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE62126044300CC82CB /* TabViewController.storyboard */; };
+		0FF03BEB2126044300CC82CB /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE72126044300CC82CB /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,10 @@
 		0F405FBC212366CD00A0DB7F /* UIKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F405FC0212366CD00A0DB7F /* UIKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitDemoTests.swift; sourceTree = "<group>"; };
 		0F405FC2212366CE00A0DB7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FF03BE42126044300CC82CB /* FirstTabController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTabController.xib; sourceTree = "<group>"; };
+		0FF03BE42126044300CC82CB /* TabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabViewController.xib; sourceTree = "<group>"; };
 		0FF03BE52126044300CC82CB /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		0FF03BE62126044300CC82CB /* FirstTabController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstTabController.storyboard; sourceTree = "<group>"; };
-		0FF03BE72126044300CC82CB /* FirstTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabController.swift; sourceTree = "<group>"; };
+		0FF03BE62126044300CC82CB /* TabViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabViewController.storyboard; sourceTree = "<group>"; };
+		0FF03BE72126044300CC82CB /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				0FF03BE52126044300CC82CB /* MainTabBarController.swift */,
-				0FF03BE72126044300CC82CB /* FirstTabController.swift */,
-				0FF03BE42126044300CC82CB /* FirstTabController.xib */,
-				0FF03BE62126044300CC82CB /* FirstTabController.storyboard */,
+				0FF03BE72126044300CC82CB /* TabViewController.swift */,
+				0FF03BE42126044300CC82CB /* TabViewController.xib */,
+				0FF03BE62126044300CC82CB /* TabViewController.storyboard */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,8 +201,8 @@
 			files = (
 				0F405FB6212366CD00A0DB7F /* LaunchScreen.storyboard in Resources */,
 				0F405FB3212366CD00A0DB7F /* Assets.xcassets in Resources */,
-				0FF03BEA2126044300CC82CB /* FirstTabController.storyboard in Resources */,
-				0FF03BE82126044300CC82CB /* FirstTabController.xib in Resources */,
+				0FF03BEA2126044300CC82CB /* TabViewController.storyboard in Resources */,
+				0FF03BE82126044300CC82CB /* TabViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF03BEB2126044300CC82CB /* FirstTabController.swift in Sources */,
+				0FF03BEB2126044300CC82CB /* TabViewController.swift in Sources */,
 				0FF03BE92126044300CC82CB /* MainTabBarController.swift in Sources */,
 				0F405FAC212366CB00A0DB7F /* AppDelegate.swift in Sources */,
 			);
