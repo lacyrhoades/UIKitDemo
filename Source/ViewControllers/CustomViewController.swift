@@ -10,7 +10,7 @@ import UIKit
 
 class CustomViewController: UIViewController {
     convenience init() {
-        // This is all our of customizations in one place
+        // This is all of our customizations in one place
         // Called if we create the ViewController by saying just `CustomViewController()`
         // No storyboard/XIB/XML involved in this path
         
@@ -22,7 +22,7 @@ class CustomViewController: UIViewController {
         
         let label = UILabel()
         label.text = "This is CustomViewController.swift"
-        label.textColor = UIColor.white
+        label.textColor = .white
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -39,16 +39,15 @@ class CustomViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        // This is an early point of customization if controller is loaded from an .xib file
+        // This is an early point of customization if the controller is loaded from an .xib file
         
-        // There is no way to do this sort of setup in a XIB file :[
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        // This is an early point of customization if controller is loaded from a .storyboard file
+        // This is an early point of customization if the controller is loaded from a .storyboard file
     }
     
     override func viewDidLoad() {
