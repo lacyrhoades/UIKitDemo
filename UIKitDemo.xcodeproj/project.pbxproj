@@ -11,10 +11,10 @@
 		0F405FB3212366CD00A0DB7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F405FB2212366CD00A0DB7F /* Assets.xcassets */; };
 		0F405FB6212366CD00A0DB7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F405FB4212366CD00A0DB7F /* LaunchScreen.storyboard */; };
 		0F405FC1212366CD00A0DB7F /* UIKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F405FC0212366CD00A0DB7F /* UIKitDemoTests.swift */; };
-		0FF03BE82126044300CC82CB /* TabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE42126044300CC82CB /* TabViewController.xib */; };
+		0FF03BE82126044300CC82CB /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE42126044300CC82CB /* CustomViewController.xib */; };
 		0FF03BE92126044300CC82CB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE52126044300CC82CB /* MainTabBarController.swift */; };
-		0FF03BEA2126044300CC82CB /* TabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE62126044300CC82CB /* TabViewController.storyboard */; };
-		0FF03BEB2126044300CC82CB /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE72126044300CC82CB /* TabViewController.swift */; };
+		0FF03BEA2126044300CC82CB /* CustomViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE62126044300CC82CB /* CustomViewController.storyboard */; };
+		0FF03BEB2126044300CC82CB /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE72126044300CC82CB /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,10 @@
 		0F405FBC212366CD00A0DB7F /* UIKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F405FC0212366CD00A0DB7F /* UIKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitDemoTests.swift; sourceTree = "<group>"; };
 		0F405FC2212366CE00A0DB7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FF03BE42126044300CC82CB /* TabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabViewController.xib; sourceTree = "<group>"; };
+		0FF03BE42126044300CC82CB /* CustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
 		0FF03BE52126044300CC82CB /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		0FF03BE62126044300CC82CB /* TabViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabViewController.storyboard; sourceTree = "<group>"; };
-		0FF03BE72126044300CC82CB /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		0FF03BE62126044300CC82CB /* CustomViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomViewController.storyboard; sourceTree = "<group>"; };
+		0FF03BE72126044300CC82CB /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 		0F405F9F212366CB00A0DB7F = {
 			isa = PBXGroup;
 			children = (
-				0F405FAA212366CB00A0DB7F /* UIKitDemo */,
+				0F405FAA212366CB00A0DB7F /* Source */,
 				0F405FBF212366CD00A0DB7F /* UIKitDemoTests */,
 				0F405FA9212366CB00A0DB7F /* Products */,
 			);
@@ -78,14 +78,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F405FAA212366CB00A0DB7F /* UIKitDemo */ = {
+		0F405FAA212366CB00A0DB7F /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				0F405FAB212366CB00A0DB7F /* AppDelegate.swift */,
 				0FF03BE32126044300CC82CB /* ViewControllers */,
 				0FF03BEC2126047D00CC82CB /* Supporting Files */,
 			);
-			path = UIKitDemo;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		0F405FBF212366CD00A0DB7F /* UIKitDemoTests */ = {
@@ -101,9 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				0FF03BE52126044300CC82CB /* MainTabBarController.swift */,
-				0FF03BE72126044300CC82CB /* TabViewController.swift */,
-				0FF03BE42126044300CC82CB /* TabViewController.xib */,
-				0FF03BE62126044300CC82CB /* TabViewController.storyboard */,
+				0FF03BE72126044300CC82CB /* CustomViewController.swift */,
+				0FF03BE42126044300CC82CB /* CustomViewController.xib */,
+				0FF03BE62126044300CC82CB /* CustomViewController.storyboard */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,8 +201,8 @@
 			files = (
 				0F405FB6212366CD00A0DB7F /* LaunchScreen.storyboard in Resources */,
 				0F405FB3212366CD00A0DB7F /* Assets.xcassets in Resources */,
-				0FF03BEA2126044300CC82CB /* TabViewController.storyboard in Resources */,
-				0FF03BE82126044300CC82CB /* TabViewController.xib in Resources */,
+				0FF03BEA2126044300CC82CB /* CustomViewController.storyboard in Resources */,
+				0FF03BE82126044300CC82CB /* CustomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF03BEB2126044300CC82CB /* TabViewController.swift in Sources */,
+				0FF03BEB2126044300CC82CB /* CustomViewController.swift in Sources */,
 				0FF03BE92126044300CC82CB /* MainTabBarController.swift in Sources */,
 				0F405FAC212366CB00A0DB7F /* AppDelegate.swift in Sources */,
 			);
@@ -376,7 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZT822U3RS;
-				INFOPLIST_FILE = "UIKitDemo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZT822U3RS;
-				INFOPLIST_FILE = "UIKitDemo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

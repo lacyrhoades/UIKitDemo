@@ -1,5 +1,5 @@
 //
-//  TabViewController.swift
+//  CustomViewController.swift
 //  UIKitDemo
 //
 //  Created by Lacy Rhoades on 8/16/18.
@@ -8,8 +8,12 @@
 
 import UIKit
 
-class TabViewController: UIViewController {
+class CustomViewController: UIViewController {
     convenience init() {
+        // This is all our of customizations in one place
+        // Called if we create the ViewController by saying just `CustomViewController()`
+        // No storyboard/XIB/XML involved in this path
+        
         self.init(nibName: nil, bundle: nil)
         
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
@@ -17,7 +21,7 @@ class TabViewController: UIViewController {
         self.view.backgroundColor = .red
         
         let label = UILabel()
-        label.text = "This is TabViewController.swift"
+        label.text = "This is CustomViewController.swift"
         label.textColor = UIColor.white
         label.textAlignment = .center
         
@@ -34,9 +38,21 @@ class TabViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        // This is an early point of customization if controller is loaded from an .xib file
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        // This is an early point of customization if controller is loaded from a .storyboard file
+        
+    }
+    
+    override func viewDidLoad() {
+        // This is a later point of customization, no matter how we got here
+        // This method always gets called
+        // Works for .storyboard files, .xib files and for creating controllers in code
     }
 }
