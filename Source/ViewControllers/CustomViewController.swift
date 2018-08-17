@@ -41,13 +41,14 @@ class CustomViewController: UIViewController {
         
         // This is an early point of customization if controller is loaded from an .xib file
         
+        // There is no way to do this sort of setup in a XIB file :[
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         // This is an early point of customization if controller is loaded from a .storyboard file
-        
     }
     
     override func viewDidLoad() {

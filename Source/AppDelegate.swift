@@ -23,9 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // This calls `init(nibName: String?, bundle: Bundle?)`
         let tab2 = CustomViewController(nibName: "CustomViewController", bundle: nil)
         
-        // There is no way to do this sort of setup in a XIB file :[
-        tab2.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
-        
         // Create tab 3 using the [...].playground file
         // This calls `init?(coder: NSCoder)`
         let tab3 = UIStoryboard(name: "CustomViewController", bundle: nil).instantiateInitialViewController()!
