@@ -10,32 +10,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Custom View Controller-->
         <scene sceneID="ahd-HJ-sAE">
             <objects>
-                <viewController id="WTk-Wt-y9H" sceneMemberID="viewController">
+                <viewController id="WTk-Wt-y9H" customClass="CustomViewController" customModule="UIKitDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ax-jM-YHk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is CustomViewController.storyboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epY-ac-bjn">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rks-Ne-AGE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJk-5J-Gzq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2h-8r-FNa" userLabel="Date Label">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="epY-ac-bjn" secondAttribute="bottom" id="Jne-uI-g2Y"/>
-                            <constraint firstItem="epY-ac-bjn" firstAttribute="top" secondItem="7ax-jM-YHk" secondAttribute="top" id="Xan-j5-a2H"/>
-                            <constraint firstAttribute="trailing" secondItem="epY-ac-bjn" secondAttribute="trailing" id="eAv-u4-vGl"/>
-                            <constraint firstItem="epY-ac-bjn" firstAttribute="leading" secondItem="7ax-jM-YHk" secondAttribute="leading" id="hEe-OT-uol"/>
+                            <constraint firstItem="Rks-Ne-AGE" firstAttribute="top" secondItem="7ax-jM-YHk" secondAttribute="top" id="6W7-ml-Skx"/>
+                            <constraint firstAttribute="bottom" secondItem="Rks-Ne-AGE" secondAttribute="bottom" id="Xoa-Qq-aLp"/>
+                            <constraint firstItem="Rks-Ne-AGE" firstAttribute="leading" secondItem="7ax-jM-YHk" secondAttribute="leading" id="o0c-hd-ObJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Rks-Ne-AGE" secondAttribute="trailing" id="rmN-39-hc7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UmL-Rz-yzD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" systemItem="downloads" id="RQE-Nl-k1Y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="Z2h-8r-FNa" id="xFC-Yr-pjN"/>
+                        <outlet property="label" destination="bJk-5J-Gzq" id="OKv-F5-F5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jtx-jS-HnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

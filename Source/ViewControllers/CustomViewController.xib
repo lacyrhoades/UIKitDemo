@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomViewController">
             <connections>
+                <outlet property="dateLabel" destination="ury-c5-6oo" id="fWY-Ws-OdP"/>
+                <outlet property="label" destination="da9-yd-zvT" id="pjD-3e-19u"/>
                 <outlet property="view" destination="z6C-CE-TLa" id="qgW-sl-VZT"/>
             </connections>
         </placeholder>
@@ -20,19 +22,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is CustomViewController.xib" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da9-yd-zvT">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xhT-H1-4aX">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is CustomViewController.xib" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da9-yd-zvT">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Date ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ury-c5-6oo">
+                            <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="da9-yd-zvT" firstAttribute="top" secondItem="z6C-CE-TLa" secondAttribute="top" id="GsU-pb-ETV"/>
-                <constraint firstItem="da9-yd-zvT" firstAttribute="leading" secondItem="z6C-CE-TLa" secondAttribute="leading" id="W4h-r7-OnN"/>
-                <constraint firstAttribute="trailing" secondItem="da9-yd-zvT" secondAttribute="trailing" id="ebl-4I-mDn"/>
-                <constraint firstAttribute="bottom" secondItem="da9-yd-zvT" secondAttribute="bottom" id="ire-1T-WGI"/>
+                <constraint firstItem="xhT-H1-4aX" firstAttribute="top" secondItem="z6C-CE-TLa" secondAttribute="top" id="Oia-tz-dfD"/>
+                <constraint firstItem="xhT-H1-4aX" firstAttribute="leading" secondItem="z6C-CE-TLa" secondAttribute="leading" id="PhK-xU-b8k"/>
+                <constraint firstAttribute="trailing" secondItem="xhT-H1-4aX" secondAttribute="trailing" id="Uwy-4K-AJJ"/>
+                <constraint firstAttribute="bottom" secondItem="xhT-H1-4aX" secondAttribute="bottom" id="ga1-17-crt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="1FF-ll-sDv"/>
             <point key="canvasLocation" x="67" y="-123"/>
