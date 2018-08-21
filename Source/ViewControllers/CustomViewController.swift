@@ -63,14 +63,8 @@ class CustomViewController: UIViewController {
         // This is a later point of customization, no matter how we got here
         // This method always gets called
         // Works for .storyboard files, .xib files and for creating controllers in code
-               
-        // Calling this here we get an exception
-        // "unsafeMutableAddressor"
-        // Thread 1: EXC_BAD_INSTRUCTION (code=EXC_I386_INVOP, subcode=0x0)
-        // let now = Context.date()
         
         DispatchQueue.main.async {
-            // But here is fine
             let now = Context.date()
             self.dateLabel.text = "Current Date: \(now)"
         }
