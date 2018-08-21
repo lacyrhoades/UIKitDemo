@@ -11,21 +11,22 @@ import UIKit
 class MainTabBarController: UITabBarController {
     var launchView: UIView
     
+    // Create our first View Controller using CustomViewController.swift
+    // This calls `init()`
+    let firstVC: CustomViewController = CustomViewController()
+    
+    // Create a second View Controller using the [...].xib file
+    // This calls `init(nibName: String?, bundle: Bundle?)`
+    let secondVC: CustomViewController = CustomViewController(nibName: "CustomViewController", bundle: nil)
+    
+    // Create a third View Controller using the [...].playground file
+    // This calls `init?(coder: NSCoder)`
+    // Note how we have to coerce it to be of type CustomViewController
+    let thirdVC: CustomViewController = UIStoryboard(name: "CustomViewController", bundle: nil).instantiateInitialViewController() as! CustomViewController
+    
     init() {
         launchView = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!.view
         super.init(nibName: nil, bundle: nil)
-        
-        // Create our first View Controller using CustomViewController.swift
-        // This calls `init()`
-        let firstVC = CustomViewController()
-        
-        // Create a second View Controller using the [...].xib file
-        // This calls `init(nibName: String?, bundle: Bundle?)`
-        let secondVC = CustomViewController(nibName: "CustomViewController", bundle: nil)
-        
-        // Create a third View Controller using the [...].playground file
-        // This calls `init?(coder: NSCoder)`
-        let thirdVC = UIStoryboard(name: "CustomViewController", bundle: nil).instantiateInitialViewController()!
         
         self.viewControllers = [firstVC, secondVC, thirdVC]
     }
