@@ -24,11 +24,9 @@ class CustomViewController: UIViewController {
         
         let label = UILabel()
         let dateLabel = UILabel()
-        
         label.text = "This is CustomViewController.swift"
         label.textColor = .white
         label.textAlignment = .center
-        
         dateLabel.textColor = .white
         dateLabel.textAlignment = .center
         
@@ -52,15 +50,12 @@ class CustomViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
         // This is an early point of customization if the controller is loaded from an .xib file
-        
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         // This is an early point of customization if the controller is loaded from a .storyboard file
     }
     
