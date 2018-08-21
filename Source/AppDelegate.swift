@@ -15,25 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // Create tab 1 using CustomViewController.swift
-        // This calls `init()`
-        let tab1 = CustomViewController()
+        Context.connectServices(toApplication: application)
         
-        // Create tab 2 using the [...].xib file
-        // This calls `init(nibName: String?, bundle: Bundle?)`
-        let tab2 = CustomViewController(nibName: "CustomViewController", bundle: nil)
-        
-        // Create tab 3 using the [...].playground file
-        // This calls `init?(coder: NSCoder)`
-        let tab3 = UIStoryboard(name: "CustomViewController", bundle: nil).instantiateInitialViewController()!
+        // This is fine
+        let now = Context.date()
+        print(now)
         
         // Set up a tab bar view controller across the whole "screen"
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = MainTabBarController(tabs: [tab1, tab2, tab3])
+        self.window?.rootViewController = Context.mainViewController
         self.window?.makeKeyAndVisible()
         
         return true
     }
     
 }
-

@@ -9,6 +9,9 @@
 import UIKit
 
 class CustomViewController: UIViewController {
+    let label = UILabel()
+    let dateLabel = UILabel()
+    
     convenience init() {
         // This is all of our customizations in one place
         // Called if we create the ViewController by saying just `CustomViewController()`
@@ -20,19 +23,25 @@ class CustomViewController: UIViewController {
         
         self.view.backgroundColor = .red
         
-        let label = UILabel()
         label.text = "This is CustomViewController.swift"
         label.textColor = .white
         label.textAlignment = .center
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(label)
+        dateLabel.textColor = .white
+        dateLabel.textAlignment = .center
+        
+        let stack = UIStackView(arrangedSubviews: [label, dateLabel])
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
+        
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(stack)
         
         NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: label, attribute: .topMargin, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: label, attribute: .bottomMargin, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: 0)
+            NSLayoutConstraint(item: stack, attribute: .topMargin, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: stack, attribute: .bottomMargin, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: stack, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: stack, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: 0)
             ])
     }
     
@@ -54,5 +63,16 @@ class CustomViewController: UIViewController {
         // This is a later point of customization, no matter how we got here
         // This method always gets called
         // Works for .storyboard files, .xib files and for creating controllers in code
+               
+        // Calling this here we get an exception
+        // "unsafeMutableAddressor"
+        // Thread 1: EXC_BAD_INSTRUCTION (code=EXC_I386_INVOP, subcode=0x0)
+        // let now = Context.date()
+        
+        DispatchQueue.main.async {
+            // But here is fine
+            let now = Context.date()
+            self.dateLabel.text = "Current Date: \(now)"
+        }
     }
 }

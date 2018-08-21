@@ -11,8 +11,9 @@
 		0F405FB3212366CD00A0DB7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F405FB2212366CD00A0DB7F /* Assets.xcassets */; };
 		0F405FB6212366CD00A0DB7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F405FB4212366CD00A0DB7F /* LaunchScreen.storyboard */; };
 		0F405FC1212366CD00A0DB7F /* UIKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F405FC0212366CD00A0DB7F /* UIKitDemoTests.swift */; };
+		0FAA4974212C3F01003BF7E4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA4973212C3F01003BF7E4 /* Environment.swift */; };
 		0FF03BE82126044300CC82CB /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE42126044300CC82CB /* CustomViewController.xib */; };
-		0FF03BE92126044300CC82CB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE52126044300CC82CB /* MainTabBarController.swift */; };
+		0FF03BE92126044300CC82CB /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE52126044300CC82CB /* CustomTabBarController.swift */; };
 		0FF03BEA2126044300CC82CB /* CustomViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF03BE62126044300CC82CB /* CustomViewController.storyboard */; };
 		0FF03BEB2126044300CC82CB /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF03BE72126044300CC82CB /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,8 +37,9 @@
 		0F405FBC212366CD00A0DB7F /* UIKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F405FC0212366CD00A0DB7F /* UIKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitDemoTests.swift; sourceTree = "<group>"; };
 		0F405FC2212366CE00A0DB7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FAA4973212C3F01003BF7E4 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0FF03BE42126044300CC82CB /* CustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
-		0FF03BE52126044300CC82CB /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		0FF03BE52126044300CC82CB /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		0FF03BE62126044300CC82CB /* CustomViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomViewController.storyboard; sourceTree = "<group>"; };
 		0FF03BE72126044300CC82CB /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0F405FAB212366CB00A0DB7F /* AppDelegate.swift */,
+				0FAA4973212C3F01003BF7E4 /* Environment.swift */,
 				0FF03BE32126044300CC82CB /* ViewControllers */,
 				0FF03BEC2126047D00CC82CB /* Supporting Files */,
 			);
@@ -100,7 +103,7 @@
 		0FF03BE32126044300CC82CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0FF03BE52126044300CC82CB /* MainTabBarController.swift */,
+				0FF03BE52126044300CC82CB /* CustomTabBarController.swift */,
 				0FF03BE72126044300CC82CB /* CustomViewController.swift */,
 				0FF03BE42126044300CC82CB /* CustomViewController.xib */,
 				0FF03BE62126044300CC82CB /* CustomViewController.storyboard */,
@@ -221,7 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF03BEB2126044300CC82CB /* CustomViewController.swift in Sources */,
-				0FF03BE92126044300CC82CB /* MainTabBarController.swift in Sources */,
+				0FAA4974212C3F01003BF7E4 /* Environment.swift in Sources */,
+				0FF03BE92126044300CC82CB /* CustomTabBarController.swift in Sources */,
 				0F405FAC212366CB00A0DB7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

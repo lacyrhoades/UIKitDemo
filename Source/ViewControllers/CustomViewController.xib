@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomViewController">
             <connections>
-                <outlet property="view" destination="z6C-CE-TLa" id="W6e-K1-p58"/>
+                <outlet property="view" destination="z6C-CE-TLa" id="qgW-sl-VZT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

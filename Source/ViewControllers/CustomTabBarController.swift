@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class CustomTabBarController: UITabBarController {
     var launchView: UIView
     
     init(tabs: [UIViewController]) {
@@ -37,4 +37,3 @@ class MainTabBarController: UITabBarController {
         }
     }
 }
-
