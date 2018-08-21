@@ -8,13 +8,26 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController {
     var launchView: UIView
     
-    init(tabs: [UIViewController]) {
+    init() {
         launchView = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!.view
         super.init(nibName: nil, bundle: nil)
-        self.viewControllers = tabs
+        
+        // Create our first View Controller using CustomViewController.swift
+        // This calls `init()`
+        let firstVC = CustomViewController()
+        
+        // Create a second View Controller using the [...].xib file
+        // This calls `init(nibName: String?, bundle: Bundle?)`
+        let secondVC = CustomViewController(nibName: "CustomViewController", bundle: nil)
+        
+        // Create a third View Controller using the [...].playground file
+        // This calls `init?(coder: NSCoder)`
+        let thirdVC = UIStoryboard(name: "CustomViewController", bundle: nil).instantiateInitialViewController()!
+        
+        self.viewControllers = [firstVC, secondVC, thirdVC]
     }
     
     override func viewDidLoad() {

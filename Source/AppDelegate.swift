@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         // Set up a tab bar view controller across the whole "screen"
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = Context.mainViewController
+        self.window?.rootViewController = MainTabBarController()
         self.window?.makeKeyAndVisible()
         
         return true

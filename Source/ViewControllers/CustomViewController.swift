@@ -19,11 +19,14 @@ class CustomViewController: UIViewController {
         
         self.init(nibName: nil, bundle: nil)
         
+        let label = UILabel()
+        self.label = label
+        
+        let dateLabel = UILabel()
+        self.dateLabel = dateLabel
+        
         self.view.backgroundColor = .red
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
-        
-        let label = UILabel()
-        let dateLabel = UILabel()
         
         label.text = "This is CustomViewController.swift"
         label.textColor = .white
@@ -35,9 +38,6 @@ class CustomViewController: UIViewController {
         let stack = UIStackView(arrangedSubviews: [label, dateLabel])
         stack.axis = .vertical
         stack.distribution = .fillEqually
-        
-        self.label = label
-        self.dateLabel = dateLabel
         
         stack.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(stack)
@@ -68,10 +68,8 @@ class CustomViewController: UIViewController {
         // This is a later point of customization, no matter how we got here
         // This method always gets called
         // Works for .storyboard files, .xib files and for creating controllers in code
-        
-        DispatchQueue.main.async {
-            let now = Context.date()
-            self.dateLabel?.text = "Current Date: \(now)"
-        }
+
+        let now = Context.date()
+        self.dateLabel?.text = "Current Date: \(now)"
     }
 }
