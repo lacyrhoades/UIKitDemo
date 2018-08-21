@@ -9,8 +9,8 @@
 import UIKit
 
 class CustomViewController: UIViewController {
-    let label = UILabel()
-    let dateLabel = UILabel()
+    @IBOutlet var label: UILabel?
+    @IBOutlet var dateLabel: UILabel?
     
     convenience init() {
         // This is all of our customizations in one place
@@ -19,9 +19,11 @@ class CustomViewController: UIViewController {
         
         self.init(nibName: nil, bundle: nil)
         
+        self.view.backgroundColor = .red
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
-        self.view.backgroundColor = .red
+        let label = UILabel()
+        let dateLabel = UILabel()
         
         label.text = "This is CustomViewController.swift"
         label.textColor = .white
@@ -33,6 +35,9 @@ class CustomViewController: UIViewController {
         let stack = UIStackView(arrangedSubviews: [label, dateLabel])
         stack.axis = .vertical
         stack.distribution = .fillEqually
+        
+        self.label = label
+        self.dateLabel = dateLabel
         
         stack.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(stack)
@@ -66,7 +71,7 @@ class CustomViewController: UIViewController {
         
         DispatchQueue.main.async {
             let now = Context.date()
-            self.dateLabel.text = "Current Date: \(now)"
+            self.dateLabel?.text = "Current Date: \(now)"
         }
     }
 }
