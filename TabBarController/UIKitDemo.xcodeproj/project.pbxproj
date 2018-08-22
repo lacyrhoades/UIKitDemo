@@ -71,6 +71,7 @@
 		0F405F9F212366CB00A0DB7F = {
 			isa = PBXGroup;
 			children = (
+				0FF03BEC2126047D00CC82CB /* Supporting Files */,
 				0F405FAA212366CB00A0DB7F /* Source */,
 				0F405FBF212366CD00A0DB7F /* UIKitDemoTests */,
 				0F405FA9212366CB00A0DB7F /* Products */,
@@ -94,7 +95,6 @@
 				0FED7080212DC45400E11DD4 /* UIKit */,
 				0FED707B212DBD1400E11DD4 /* Controls */,
 				0FF03BE32126044300CC82CB /* ViewControllers */,
-				0FF03BEC2126047D00CC82CB /* Supporting Files */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZT822U3RS;
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZT822U3RS;
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,12 +13,12 @@ class CustomViewController: UIViewController {
     @IBOutlet var dateLabel: UILabel?
     @IBOutlet var textField: CustomTextField?
     
-    convenience init() {
+    init() {
         // This is all of our customizations in one place
         // Called if we create the ViewController by saying just `CustomViewController()`
         // No storyboard/XIB/XML involved in this path
         
-        self.init(nibName: nil, bundle: nil)
+        super.init(nibName: nil, bundle: nil)
         
         let label = UILabel()
         self.label = label
