@@ -26,7 +26,6 @@ class CustomViewController: UIViewController {
         self.dateLabel = dateLabel
         
         self.view.backgroundColor = .red
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
         label.text = "This is CustomViewController.swift"
         label.textColor = .white
@@ -54,8 +53,6 @@ class CustomViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         // This is an early point of customization if the controller is loaded from an .xib file
-        
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -71,5 +68,9 @@ class CustomViewController: UIViewController {
 
         let now = Context.date()
         self.dateLabel?.text = "Current Date: \(now)"
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }

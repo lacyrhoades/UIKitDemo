@@ -46,7 +46,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UmL-Rz-yzD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" systemItem="downloads" id="RQE-Nl-k1Y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateLabel" destination="Z2h-8r-FNa" id="xFC-Yr-pjN"/>

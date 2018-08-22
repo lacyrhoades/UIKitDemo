@@ -28,6 +28,10 @@ class MainTabBarController: UITabBarController {
         launchView = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!.view
         super.init(nibName: nil, bundle: nil)
         
+        firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
+        thirdVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 2)
+        
         self.viewControllers = [firstVC, secondVC, thirdVC]
     }
     
