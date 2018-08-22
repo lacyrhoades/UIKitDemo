@@ -11,6 +11,7 @@ import UIKit
 class CustomViewController: UIViewController {
     @IBOutlet var label: UILabel?
     @IBOutlet var dateLabel: UILabel?
+    @IBOutlet var textField: CustomTextField?
     
     convenience init() {
         // This is all of our customizations in one place
@@ -25,6 +26,9 @@ class CustomViewController: UIViewController {
         let dateLabel = UILabel()
         self.dateLabel = dateLabel
         
+        let textField = CustomTextField()
+        self.textField = textField
+        
         self.view.backgroundColor = .red
         
         label.text = "This is CustomViewController.swift"
@@ -34,7 +38,7 @@ class CustomViewController: UIViewController {
         dateLabel.textColor = .white
         dateLabel.textAlignment = .center
         
-        let stack = UIStackView(arrangedSubviews: [label, dateLabel])
+        let stack = UIStackView(arrangedSubviews: [label, textField, dateLabel])
         stack.axis = .vertical
         stack.distribution = .fillEqually
         
